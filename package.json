@@ -43,6 +43,10 @@
 	"pnpm": {
 		"onlyBuiltDependencies": [
 			"esbuild"
-		]
+		],
+		"supportedArchitectures": {
+			"os": ["linux", "darwin"],
+			"cpu": ["x64", "arm64"]
+		}
 	}
 }
