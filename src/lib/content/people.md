@@ -54,6 +54,16 @@ team:
   - name: Rüya Arslan
     role: "MSc thesis student"
     image: /assets/img/team/default_person.jpg
+  - name: Timothy Fuqua
+    role: "Postdoctoral researcher"
+    contact: "timothy.fuqua [at] unibe.ch"
+    image: /assets/img/team/default_person.jpg
+    links: "[Google Scholar](https://scholar.google.com/citations?user=oinW8hAAAAAJ&hl=en&oi=ao), [ORCID](https://orcid.org/0000-0003-4005-3329)"
+  - name: Amo Ikiror
+    role: "MSc thesis student"
+    contact: "amo.ikiror [at] students.unibe.ch"
+    image: /assets/img/team/default_person.jpg
+    
 
 associated:
   - name: Zachary Bailey
