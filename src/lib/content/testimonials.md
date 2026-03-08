@@ -1,17 +1,17 @@
 ---
 title: What our lab members say
 items:
-  - author: "Timothy Fuqua"
+  - author: "Timothy Fuqua | Postdoctoral researcher"
     quote: "Evolution is the strongest creative force in the universe - and lots of procrastination."
-  - author: "Suman Das"
+  - author: "Suman Das | Postdoctoral researcher"
     quote: "I model evolution on rugged fitness landscapes, studying how 'life finds a way' through complex genotypic terrain over many generations."
-  - author: "Rüya Eylül Arslan"
-    quote: "In a theoretical fitness landscape, all peaks were equal, but some peaks were more equal than others."
-  - author: "Lab Member Y"
-    quote: "I suppose I'll have to add the force of gravity to my list of enemies."
-  - author: "Lab Member A"
-    quote: "The moral of Snow White is never eat apples."
-  - author: "Aristotle"
-    quote: "The greatest crimes are not those committed for the sake of necessity but those committed for the sake of superfluity."
+  - author: "Julio Ayala-López | PhD student"
+    quote: "What's in a hybrid? I use theoretical models to study how heterosis and hybrid incompatibilities interact over evolutionary timescales, and bioinformatics to study expression patterns in natural hybrid populations."
+  - author: "Russell Jasper | PhD student"
+    quote: "I study how evolutionary forces shape microbial adaptation and diversity in complex, spatially heterogeneous environments."
+  - author: "Rüya Eylül Arslan | MsC thesis student"
+    quote: "I investigate how evolution picks its favorites, and I do that while measuring the basins of attraction in fitness landscapes."
+  - author: "Claudia Bank | Principal investigator, Head of Division"
+    quote: "I find interactions fascinating; be they between scientific fields, between genes, between concepts in ecology and evolution, or between people."
 
 ---
