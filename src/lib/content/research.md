@@ -24,4 +24,4 @@ Based on the theory of mutational meltdown, we model different mechanisms of ada
 
 ---
 
-See also: our [publications](/publications) and [resources](/resources)
+See also: our [publications](/publications) and [tools](/tools)
