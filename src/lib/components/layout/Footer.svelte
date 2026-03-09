@@ -1,8 +1,11 @@
 <script lang="ts">
+  // Footer content (link columns, copyright) comes from src/lib/content/footer.md,
+  // loaded in +layout.server.ts and injected into every page via the SvelteKit page store.
+  // To change footer links or copyright text, edit footer.md — do not hardcode them here.
   import { page } from '$app/stores';
-  import { base } from '$app/paths';
-  
-  $: footerData = $page.data.footer;
+  import { base } from '$app/paths'; // base = '/banklab-mvp' — prefixed to all internal links
+
+  $: footerData = $page.data.footer; // populated by +layout.server.ts
   const currentYear = new Date().getFullYear();
 </script>
 
