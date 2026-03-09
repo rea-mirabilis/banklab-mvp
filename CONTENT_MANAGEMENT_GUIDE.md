@@ -14,17 +14,17 @@ The key difference is the underlying technology and file structure. Instead of t
 
 Every time a change is pushed to the `main` branch of the repository, a GitHub Action will automatically:
 1.  **Build the Website:** It will generate all the necessary static HTML, CSS, and JavaScript files for the website.
-2.  **Deploy to GitHub Pages:** It will push these generated files to the `gh-pages` branch, making the changes live on the website.
+2.  **Deploy to GitHub Pages:** It will publish these generated files directly via GitHub Pages, making the changes live on the website.
 
 You do not need to do anything to trigger this process; it is entirely automatic. You only need to make your content changes and save them. The website will typically be updated within 2-5 minutes.
 
 ## 2. How to Edit Website Content
 
-All content for the website will be stored as Markdown (`.md`) files in the `src/lib/content` directory (this directory will be created). Each section of the website (e.g., People, Research, Publications) will have its own file or folder.
+All content for the website is stored as Markdown (`.md`) files in the `src/lib/content` directory. Each section of the website (e.g., People, Research, Publications) has its own file.
 
 ### Step-by-Step Guide to Editing a Page:
 
-1.  **Navigate to the GitHub Repository:** Open your web browser and go to the project's GitHub repository: [https://github.com/banklab/banklab.github.io](https://github.com/banklab/banklab.github.io)
+1.  **Navigate to the GitHub Repository:** Open your web browser and go to the project's GitHub repository (the private `banklab-mvp` repo).
 
 2.  **Locate the Content File:**
     *   Navigate into the `src/lib/content/` directory.
@@ -49,7 +49,7 @@ The process for adding new content items, such as a new team member or a new pub
 
 ### Example: Adding a New Team Member
 
-Let's assume the team members are listed in a file at `src/lib/content/people.md`. The file might contain a list of members formatted in a specific way (e.g., using YAML Front Matter or a specific Markdown structure).
+Team members are listed in `src/lib/content/people.md` using YAML frontmatter. See `src/lib/content/README.md` for the exact field format.
 
 1.  **Navigate to and edit the `people.md` file** as described above.
 2.  **Copy an existing entry** to ensure you match the format exactly.
