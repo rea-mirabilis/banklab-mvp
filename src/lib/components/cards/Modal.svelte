@@ -1,4 +1,19 @@
 <script lang="ts">
+  // A fullscreen overlay dialog with fade + scale transitions.
+  //
+  // Props:
+  //   show     — boolean controlling visibility; managed by the parent component
+  //   onclose  — callback invoked when the user closes the modal (clicks backdrop or × button)
+  //   children — content rendered inside the modal body (passed as a snippet)
+  //
+  // Usage (in news/+page.svelte):
+  //   <Modal show={showModal} onclose={closeModal}>
+  //     <h2>{selectedNews.title}</h2>
+  //     ...
+  //   </Modal>
+  //
+  // Clicking the dark backdrop also closes the modal (stopPropagation on the content
+  // div prevents clicks inside from bubbling up to the backdrop).
   import { fade, scale } from 'svelte/transition';
 
   let { show = false, onclose, children } = $props();
