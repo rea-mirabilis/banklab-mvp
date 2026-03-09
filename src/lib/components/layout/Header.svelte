@@ -1,12 +1,13 @@
 <script lang="ts">
+  // Header content (title, nav links) comes from src/lib/content/header.md,
+  // loaded in +layout.server.ts and injected into every page via the SvelteKit page store.
+  // To change nav links, edit header.md — do not hardcode them here.
   import { page } from '$app/stores';
-  import { base } from '$app/paths';
+  import { base } from '$app/paths'; // base = '/banklab-mvp' — prefixed to all internal links
 
-  // Get data from page store (passed from +layout.server.ts)
-  $: headerData = $page.data.header;
+  $: headerData = $page.data.header; // populated by +layout.server.ts
   $: navLinks = headerData?.nav_links || [];
 
-  // Function to toggle mobile menu
   let isMenuOpen = false;
   const toggleMenu = () => {
     isMenuOpen = !isMenuOpen;
