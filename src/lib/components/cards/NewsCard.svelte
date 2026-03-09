@@ -1,11 +1,19 @@
 <script lang="ts">
+  // Props:
+  //   date     — formatted date string shown on the card (e.g. "08.12.2025")
+  //   title    — card headline (optional)
+  //   image    — image path relative to static/ (e.g. "/assets/img/news/default-meeting.jpg")
+  //              base is prepended automatically — do not include /banklab-mvp
+  //   onClick  — handler for the "Read more" button; used by the news page to open a Modal
+  //
+  // Content (the short description text) is passed as a slot: <NewsCard ...>content here</NewsCard>
   import { base } from '$app/paths';
 
-  let { 
-    date, 
-    title = undefined, 
-    image = undefined, 
-    onClick = undefined 
+  let {
+    date,
+    title = undefined,
+    image = undefined,
+    onClick = undefined
   }: {
     date: string;
     title?: string;
