@@ -3,7 +3,8 @@
   import NewsCard from '$lib/components/cards/NewsCard.svelte';
   import { base } from '$app/paths';
   import { marked } from 'marked';
-  
+  import Modal from '$lib/components/cards/Modal.svelte';
+
   export let data;
 
   // Placeholder data to match mockup content
@@ -45,6 +46,19 @@
     const date = new Date(dateString);
     return date.toLocaleDateString('de-CH', { day: '2-digit', month: '2-digit', year: 'numeric' });
   }
+
+let showModal = false;
+let selectedNews = null;
+
+function openModal(event, item) {
+  event.preventDefault();
+  selectedNews = item;
+  showModal = true;
+}
+function closeModal() {
+  showModal = false;
+  selectedNews = null;
+}
 </script>
 
 <svelte:head>
@@ -120,7 +134,7 @@
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       {#each data.news.items as item}
-        <NewsCard date={formatDate(item.date)} title={item.title} image={item.image} link={base + "/news"}>
+        <NewsCard date={formatDate(item.date)} title={item.title} image={item.image} onClick={(e) => openModal(e, item)}>
           {@html marked.parse(item.content)}
         </NewsCard>
       {/each}
@@ -131,3 +145,16 @@
     </div>
   </div>
 </section>
+
+<Modal show={showModal} onclose={closeModal}>
+  {#if selectedNews}
+    <h2 class="text-2xl font-serif font-bold mb-2">{selectedNews.title}</h2>
+    <p class="text-gray-500 text-sm mb-4">{formatDate(selectedNews.date)}</p>
+    {#if selectedNews.image}
+      <img src={selectedNews.image} alt={selectedNews.title} class="w-full h-64 object-cover rounded-lg mb-6" />
+    {/if}
+    <div class="prose prose-sm max-w-none text-gray-700">
+      {@html marked.parse(selectedNews.content)}
+    </div>
+  {/if}
+</Modal>
