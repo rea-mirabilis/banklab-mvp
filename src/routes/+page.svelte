@@ -113,7 +113,7 @@
         <h2 class="text-3xl font-serif font-bold text-black mb-2">Lab News Feed</h2>
         <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eium</p>
       </div>
-      <a href={"/news"} class="hidden md:inline-block font-medium text-black hover:underline group">
+      <a href={base + "/news"} class="hidden md:inline-block font-medium text-black hover:underline group">
         View all news <span class="group-hover:translate-x-1 inline-block transition-transform">→</span>
       </a>
     </div>
@@ -127,7 +127,7 @@
     </div>
     
     <div class="mt-8 text-center md:hidden">
-      <a href={"/news"} class="font-medium text-black hover:underline">View all news →</a>
+      <a href={base + "/news"} class="font-medium text-black hover:underline">View all news →</a>
     </div>
   </div>
 </section>
