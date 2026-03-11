@@ -120,7 +120,7 @@
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       {#each data.news.items as item}
-        <NewsCard date={formatDate(item.date)} title={item.title} image={base + item.image}>
+        <NewsCard date={formatDate(item.date)} title={item.title} image={item.image}>
           {@html marked.parse(item.content)}
         </NewsCard>
       {/each}
